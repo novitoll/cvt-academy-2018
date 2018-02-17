@@ -29,5 +29,25 @@
         \item According to the coordinates of contours, classify text from image
     \end{enumerate}
 
+    Note: Cropping text lines from text image by boundaries is not effective as it's not stable to the noises
+    That's why gradients (transition of W to B, B to W) are more useful in real world data
+
+    \section{Gradients}
+
+    Apply kernel [-1, 0, 1]  as the filter to find gradients:
+
+    \includegraphics[scale=0.7]{gradients.png}
+
+    Popular kernels:
+
+    Sobel - sum gathered in the center of matrix, can be transposed to calculate grads vertically
+    Scharr - more restricted on sides, can be applied vertically
+    Laplacian - gradients, calculates vertically and horizontally at once
+
+    \includegraphics[scale=0.7]{filters.png}
+
+    Example of the input with the noise and how gradients of vertical projection + Sobel smoothing works
+
+    \includegraphics[scale=0.7]{output-gradient.png}
 
 \end{document}

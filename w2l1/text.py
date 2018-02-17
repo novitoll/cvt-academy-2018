@@ -63,10 +63,36 @@ def main():
 
         row1 = tl.concat_hor((origin, gray, blur))
         row2 = tl.concat_hor((opening, vis, text_img))
-
         final_img = tl.concat_ver((row1, row2))
         cv2.imshow("window", cv2.resize(final_img, (0, 0), fx=scale, fy=scale))
         cv2.imwrite("output.png", final_img)
+
+        # gradients
+        vertical_projection = np.sum(gray, axis=1) / 255
+        vertical_projected_image = tl.getDrawProjectionVer(origin, vertical_projection)
+
+        # Sobel gradient filtering, dx=1 -- horizontal, 3x3 kernel
+        # using float64 to find all gradients, e.g. >255
+        gradX = cv2.Sobel(gray, ddepth=cv2.CV_64F, dx=1, dy=0, ksize=3)
+        # normalize grads < 0
+        gradX = np.abs(gradX)
+
+        # normalize end image to uint8 to 0 - 255 from float64 in order to save image
+        (minVal, maxVal) = (np.min(gradX), np.max(gradX))
+        if maxVal - minVal > 0:
+            gradX = (255 * ((gradX - minVal) / float(maxVal - minVal))).astype("uint8")
+        else:
+            gradX = np.zeros(gray.shape, dtype="uint8")
+
+        verPX = np.sum(gradX, axis=1) / 255
+        verPXVis = tl.getDrawProjectionVer(vis, verPX)
+
+        row1 = tl.concat_hor((gray, vertical_projected_image))
+        row2 = tl.concat_hor((gradX, verPXVis))
+        bigImg = tl.concat_ver((row1, row2))
+
+        cv2.imshow("window-gradient", cv2.resize(bigImg, (0, 0), fx=scale, fy=scale))
+        cv2.imwrite("output-gradient.png", bigImg)
         cv2.waitKey(0)
 
 
