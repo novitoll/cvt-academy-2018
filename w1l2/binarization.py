@@ -1,5 +1,5 @@
 import cv2
-import code.tools as tl
+import cvt_utils.tools as tl
 
 # take as white-black == 0 (no BGR)
 img = cv2.imread("code/sudoku.png", 0)

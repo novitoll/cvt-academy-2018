@@ -1,0 +1,33 @@
+%%
+%% Author: novitoll
+%% 2/17/18
+%%
+
+% Preamble
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{ {code/} }
+
+\title{CVT: Lecture 3}
+\date{2018-02-16}
+\author{Novitoll}
+
+% Document
+\begin{document}
+    \maketitle
+    \pagenumbering{arabic}
+
+    \section{Task}
+    \begin{enumerate}
+        \item Get the text image
+        \item Gray-scale it, White -> black, black <- white --> gray
+        \item Blur, Make it common
+        \item Thresholding binarize
+        \item Morphology closing, reduce noize
+        \item Find contours, bounding box
+        \item According to the coordinates of contours, classify text from image
+    \end{enumerate}
+
+
+\end{document}
