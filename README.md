@@ -16,8 +16,8 @@
 
     Example of the perfect input without noise with just contouring:
 
-    ![Example](https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w2l1/output.png)
+    <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w2l1/output.png" width="50%" height="50%">
 
     Example of the input with the noise and how gradients of vertical projection + Sobel smoothing works
 
-    ![Example](https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w2l1/output-gradient.png)
+    <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w2l1/output-gradient.png" width="50%" height="50%">
