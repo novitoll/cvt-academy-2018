@@ -92,7 +92,7 @@ def main():
         bigImg = tl.concat_ver((row1, row2))
 
         cv2.imshow("window-gradient", cv2.resize(bigImg, (0, 0), fx=scale, fy=scale))
-        cv2.imwrite("output-gradient.png", bigImg)
+        cv2.imwrite("output-gradient.png", cv2.resize(bigImg, (0, 0), fx=scale, fy=scale))
         cv2.waitKey(0)
 
 
