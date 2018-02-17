@@ -10,8 +10,8 @@
     * adaptive
     * otsu
 
-    ![Example](https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/w1l2/code/sudoku-adaptive-th.png)
+    ![Example](https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w1l2/code/sudoku-adaptive-th.png)
 * W2L1 - Practice & Gradients
     * Find texts from image
 
-    ![Example](https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/w2l1/output.png)
+    ![Example](https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w2l1/output.png)
