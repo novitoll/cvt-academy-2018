@@ -5,6 +5,7 @@
     * image read and work with numpy matrix
     * 2D conv filter
     * Gaussian filter
+
 * W1L2 - Binarization
     * basic
     * adaptive
@@ -37,5 +38,9 @@
     <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w2l2/code/hough_space_lines.png" width="50%" height="50%">
     <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w2l2/code/canny0.png" width="50%" height="50%">
 
-* W3L2 - Feedforward NN & RNN
+* W3L2 - Feedforward NN & RNN (Guest lecture)
+    * TODO
 
+* W4L1 - Perspective transformation
+    * perspective transformation
+    * affine transformation
