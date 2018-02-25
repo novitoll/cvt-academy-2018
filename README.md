@@ -32,6 +32,10 @@
 * W3L1 - Line detection
     * Hough space
     * PClines
+    * Canny algorithm (edge detector)
+
+    <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w2l2/code/hough_space_lines.png" width="50%" height="50%">
+    <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w2l2/code/canny0.png" width="50%" height="50%">
 
 * W3L2 - Feedforward NN & RNN
 
