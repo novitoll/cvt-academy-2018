@@ -49,5 +49,12 @@
 
 ---
 
-* W3L2 - Feedforward NN & RNN
+* W3L2 - Feedforward NN & RNN (Guest lecture)
+    * TODO
+
+---
+
+* W4L1 - Perspective transformation
+    * perspective transformation
+    * affine transformation
 
