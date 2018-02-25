@@ -21,3 +21,17 @@
     Example of the input with the noise and how gradients of vertical projection + Sobel smoothing works
 
     <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w2l1/output-gradient.png" width="50%" height="50%">
+
+* W2L2 - Projection & HOG
+    * Find peaks of projection
+    * Sobel X, Y combined gradient magnitude + angel
+    * HOG (Histogram of oriented gradients)
+
+    <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w2l2/code/hog.png" width="50%" height="50%">
+
+* W3L1 - Line detection
+    * Hough space
+    * PClines
+
+* W3L2 - Feedforward NN & RNN
+
