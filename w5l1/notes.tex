@@ -1,0 +1,134 @@
+%%
+%% Author: novitoll
+%% 3/8/18
+%%
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\title{CVT: Lecture 5}
+\date{2018-03-08}
+\author{Novitoll}
+
+\begin{document}
+    \maketitle
+    \pagenumbering{arabic}
+
+    \section{Taylor formula} \label{sec:taylorformula}
+
+    \begin{align}
+        f(x) = f(0) + O(1)
+    \end{align}
+
+    Given parameter, compute its derivative and so you can "convert" the original function to Taylor
+    \[
+        f'(x) = f'(0) + O(1) --> \int_{0}^{x} ... dx
+    \]
+
+    So basic Taylor formula is:
+    \begin{multline*}
+        f(x) = f(0) + f'(0)x + f''(0)\frac{x^2}{2} \\
+            + f'''(0)\frac{x^3}{6} + f^{IV}(0)\frac{x^4}{24} + f^n(0)\frac{x^n}{n!} + O(x^n)
+    \end{multline*}
+
+    Example:
+    \begin{gather*}
+        f(x) = x^2 + 3x + 6 \\
+        f(0) = 6; f'(0) = 3; f''(0) = 2; f'''(0) = 0; f^n(0) = 0, n > 2 \\
+        Taylor: f(x) = 6 + 3x + 2\frac{x^2}{2}
+    \end{gather*}
+
+    \section{Optical flow in general} \label{sec:optflowgeneral}
+
+    Given x, y coordinate of some pixels in image (assuming that we are dealing with the only RGB pixels) in given t time,
+    we can process the next image's pixels x, y coordinate in some $t + 1$ time
+
+    \begin{enumerate}
+        \item Constant color
+    \end{enumerate}
+
+    \begin{gather*}
+        I_1(x, y, t) \\
+        I_2(x + u, y + v, t + 1) \\
+        O = I(x + u, y + v, t + 1) - I(x, y, t)
+    \end{gather*}
+
+    Let's put it to Taylor formula, assuming that we will neglect with high order derivatives due to non-significant bias of pixels.
+
+    \begin{enumerate}[resume]
+        \item Small motion
+    \end{enumerate}
+
+    \begin{gather*}
+        I(x + u, y + v) = I(x, y) + \frac{\partial{I}}{\partial{x}}u + \frac{\partial{I}}{\partial{y}}v
+    \end{gather*}
+    \begin{multline}
+        O \approx I(x, y, t + 1) + \frac{\partial{I}}{\partial{x}}u + \frac{\partial{I}}{\partial{y}}v - I(x, y, t) \\
+            \approx [I(x, y, t + 1) - I(x, y, t)] + .. \\
+            \approx \frac{\partial{I}}{t} + \frac{\partial{I}}{\partial{x}}u + \frac{\partial{I}}{\partial{y}}v
+    \end{multline}
+
+    , which can be also exposed as $\frac{\partial{I}}{t} + \det{I} \times <u, v>$,
+    e\.g\. time derivative + multiplication of image gradient and vector of motion u, v per x, y axis.
+
+    \section{Lucas-Kanade optical flow (1981)} \label{sec:lucaskanade}
+
+    Adding here additional assumption:
+
+    \begin{enumerate}[resume]
+        \item Uniform motion of pixels
+    \end{enumerate}
+
+    Assume that you have a pixel x and you take it as 3x3 matrix with surrounded other pixels,
+    assuming that they are similar (in real life this is true for the object, probably not true for micro objects like
+    bacteria)
+
+    , then your formula (2) is true for 3x3 matrix, e.g.:
+
+    \[
+        \begin{bmatrix}
+            I_x(p_1) & \dots & I_y(p_1) \\
+            I_x(p_2) & \dots & I_y(p_2) \\
+            \vdots & \ddots & \vdots \\
+            I_x(p_9) & \dots & I_y(p_9)
+        \end{bmatrix}
+        \times
+        \begin{bmatrix}
+            u & v
+        \end{bmatrix}
+        = -
+        \begin{bmatrix}
+            I_t(p_1) \\
+            I_t(p_2) \\
+            \vdots   \\
+            I_t(p_9)
+        \end{bmatrix}
+    \]
+
+    Let's name the matrix in A, d, b:
+
+    \[
+        A_{9x2} \times d_{2x1} = B_{9x1}
+    \]
+
+    and now we want to
+
+    \[
+        minimize => \lVert{Ad - b}\rVert^2
+    \]
+
+    \subsection{Eigenvalue and eigenvector} \label{subsec:eigenvv}
+
+    Recap eigenvalue and eigenvector of linear transformation:
+    \begin{gather*}
+        T(\vec{v}) = \lambda\vec{v} \\
+        , where \ \vec{v} - eigenvector, \ \lambda - eigenvalue, e.g. some scalar
+    \end{gather*}
+
+
+
+\end{document}

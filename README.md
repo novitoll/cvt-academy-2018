@@ -50,11 +50,22 @@
 ---
 
 * W3L2 - Feedforward NN & RNN (Guest lecture)
-    * TODO
+    * Will come back to this later
 
 ---
 
 * W4L1 - Perspective transformation
     * perspective transformation
     * affine transformation
+
+---
+
+* W5L1 - Optical flow
+    * Taylor formula
+    * Optical flow in general
+    * Lucas-Kanade optical flow (1981)
+    * Eigenvalue and eigenvector
+
+    <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w5l1/pics/optflow-LK.png" width="50%" height="50%">
+---
 

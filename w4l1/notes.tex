@@ -16,12 +16,25 @@
 
 \graphicspath{ {code/} }
 
-% Document
-\begin{document}
+\title{CVT: Lecture 4}
+\date{2018-03-08}
+\author{Novitoll}
 
+\begin{document}
+    \maketitle
+    \pagenumbering{arabic}
     \section{Perspective transformation} \label{sec:perspective transformation}
 
+    \begin{align}
+        src = [(x_1, y_1), (x_2, y_2), .., (x_n, y_n)] \\
+        M = cv2.getPerspectiveTransform(src, dst)
+    \end{align}
 
     \section{Affine transformation} \label{sec:affine transformation}
+
+    \begin{align}
+        src = [(x_1, y_1), (x_2, y_2), .., (x_n, y_n)] \\
+        M = cv2.getAffineTransform(src, dst)
+    \end{align}
 
 \end{document}
