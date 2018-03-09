@@ -66,6 +66,14 @@
     * Lucas-Kanade optical flow (1981)
     * Eigenvalue and eigenvector
 
+    #### TODO: re-factor car_counter app (HOG features + SVM)
+
     <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w5l1/pics/optflow-LK.png" width="50%" height="50%">
 ---
+
+* W5L2 - Background subtraction
+    * MOG - Gaussian Mixture-based Background/Foreground Segmentation Algorithm
+    *
+
+    <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w5l2/pics/mog.gif" width="50%" height="50%">
 
