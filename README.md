@@ -64,6 +64,10 @@
     * Taylor formula
     * Optical flow in general
     * Lucas-Kanade optical flow (1981)
+        Usage in:
+        * Structure from Motion
+        * Video Compression
+        * Video Stabilization
     * Eigenvalue and eigenvector
 
     #### TODO: re-factor car_counter app (HOG features + SVM)
@@ -72,8 +76,9 @@
 ---
 
 * W5L2 - Background subtraction
+    * Detect traffic light switching (single Gaussian)
     * MOG - Gaussian Mixture-based Background/Foreground Segmentation Algorithm
-    *
 
-    <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w5l2/pics/mog.gif" width="50%" height="50%">
+    MOG | Morph. opening + MOG
+    <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w5l2/pics/mog2.gif" width="50%" height="50%">
 

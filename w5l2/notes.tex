@@ -9,6 +9,9 @@
 % Packages
 \usepackage{amsmath}
 \usepackage{enumitem}
+\usepackage{listings}
+
+\lstset{language=Python}
 
 \title{CVT: Lecture 6}
 \date{2018-03-09}
@@ -18,8 +21,33 @@
     \maketitle
     \pagenumbering{arabic}
 
-    \section{}
+    \section{Detect traffic light switching} \label{sec:practice-traffic-light}
 
+    In short, crop the traffic light from the video frame (coordinates are hard-coded,
+    assuming that videoregistrator's position is fixed), then
+
+    \begin{itemize}
+        \item take some history window, e.g.\ number of frames to save to calculate Gaussian
+        \item within history window's Gaussian (you know $\mu, \sigma$) you can apply each new \\
+              N frames to that Gaussian dist. like:
+    \end{itemize}
+
+    \begin{align}
+        mask = \lvert frame - \mu \rvert > \sigma
+    \end{align}
+
+    \section{MOG: Mixture of Gaussian models} \label{sec:mog}
+
+    In short, now when you have multiple mixture of Gaussian models,
+    there is more restriction for mask condition (1), because your sigma is not steep.
+
+    \begin{lstlisting}
+        params = dict(history=300,
+                      varThreshold=10,  # Mahalanobis distance
+                      detectShadows=False)
+        backsub = cv2.createBackgroundSubtractorMOG2(**params)
+        motion_mask = backsub.apply(frame_data, None, learning_rate)
+    \end{lstlisting}
 
 
 \end{document}
