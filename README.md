@@ -80,5 +80,7 @@
     * MOG - Gaussian Mixture-based Background/Foreground Segmentation Algorithm
 
     MOG | Morph. opening + MOG
-    <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w5l2/pics/mog2.gif" width="50%" height="50%">
+    
+    <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w5l2/pics/mog2.gif">
+---
 
