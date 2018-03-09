@@ -96,6 +96,13 @@
 
 ---
 
-* W6L2
+* W7L1 - Regularization (L1, L2)
 
+---
+
+* W8L1 - Logistic regression
+
+---
+
+* W8L2 - Naive Bayes
 
