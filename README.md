@@ -84,3 +84,18 @@
     <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w5l2/pics/mog2.gif">
 ---
 
+### NB! I already passed Andrew Ng's CS229 courses few years ago, so will briefly recap only math part
+
+---
+
+* W6L1 - ML intro: Linear regression & Gradient descent
+    * Linear Regression (generalized)
+    * BGD, SGD
+
+    <img src="https://raw.githubusercontent.com/Novitoll/cvt-academy-2018/master/w6l1/pics/sgd2.png">
+
+---
+
+* W6L2
+
+
