@@ -1,5 +1,8 @@
 ### Concepts
 
+Since lectures are 30% - CV, 70% - ML (from basic up to DL according to syllabus), I'd like to focus more on CV-related info,
+that's why I mix in this repo also some additional non-lectures related stuff in [_cv directory](https://github.com/Novitoll/cvt-academy-2018/tree/master/_cv).
+
 * W1L1 - Introduction to CV
     * openCV
     * image read and work with numpy matrix
