@@ -27,7 +27,7 @@ Test-time augmentation (TTA) - profit during test
 * Watershed transformation - [link](http://cmm.ensmp.fr/~beucher/wtshed.html)
 
 ##### Neural nets:
-    * [U-net](https://arxiv.org/pdf/1505.04597.pdf)
+* [U-net](https://arxiv.org/pdf/1505.04597.pdf)
 
 #### Refs:
 * http://lamda.nju.edu.cn/weixs/project/CNNTricks/CNNTricks.html
